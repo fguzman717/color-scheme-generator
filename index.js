@@ -8,20 +8,22 @@ const colorContent = document.getElementById("color-content");
 let colorsArray = [];
 
 generatorBtn.addEventListener("click", () => {
+  fetchColors();
+});
+
+function fetchColors() {
   fetch(`${baseURL}?hex=${seedColor.value.slice(1)}&mode=${colorScheme.value}`)
     .then((res) => res.json())
     .then((data) => {
       colorsArray = data.colors;
       renderColors();
     });
-});
+}
 
 function renderColors() {
   colorContent.innerHTML = "";
 
   for (const color of colorsArray) {
-    console.log(color.hex);
-
     const colorContainer = document.createElement("div");
     colorContainer.classList.add("color-container");
     colorContent.appendChild(colorContainer);
@@ -37,3 +39,5 @@ function renderColors() {
     colorContainer.appendChild(colorLabel);
   }
 }
+
+fetchColors();

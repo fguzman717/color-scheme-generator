@@ -4,11 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Color Scheme Generator</title>
   </head>
   <body>
-    <header class="color-selection">
-      <input type="color" name="seed-color" id="seed-color" />
+    <header>
+      <h1>Color Scheme Generator</h1>
+    </header>
+    <section class="color-selection">
+      <input type="color" name="seed-color" id="seed-color" value="#F55A5A" />
       <select name="color-scheme" id="color-scheme">
         <option value="monochrome">Monochrome</option>
         <option value="monochrome-dark">Monochrome-dark</option>
@@ -20,9 +31,8 @@
         <option value="quad">Quad</option>
       </select>
       <button class="generator-btn">Get Color Scheme</button>
-    </header>
+    </section>
     <main id="color-content"></main>
-    <footer>&copy; 2026 Color Generator</footer>
     <script src="index.js"></script>
   </body>
 </html>
