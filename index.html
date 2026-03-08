@@ -7,6 +7,22 @@
     <title>Color Scheme Generator</title>
   </head>
   <body>
+    <header class="color-selection">
+      <input type="color" name="seed-color" id="seed-color" />
+      <select name="color-scheme" id="color-scheme">
+        <option value="monochrome">Monochrome</option>
+        <option value="monochrome-dark">Monochrome-dark</option>
+        <option value="monochrome-light">Monochrome-light</option>
+        <option value="analogic">Analogic</option>
+        <option value="complement">Complement</option>
+        <option value="analogic-complement">Analogic-complement</option>
+        <option value="triad">Triad</option>
+        <option value="quad">Quad</option>
+      </select>
+      <button class="generator-btn">Get Color Scheme</button>
+    </header>
+    <main id="color-content"></main>
+    <footer>&copy; 2026 Color Generator</footer>
     <script src="index.js"></script>
   </body>
 </html>
